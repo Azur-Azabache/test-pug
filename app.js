@@ -1,6 +1,9 @@
 var express = require('express');
 var path = require('path');
+
 var app = express();
+
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: 0 }));
 
 app.set('view engine', 'pug');
 //app.use(express.static(path.join(__dirname, 'css')));
